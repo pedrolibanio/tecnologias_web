@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js\jquery-3.3.1.min.js"> </script>
+
+    <script>
+      $(function() {
+        $('#pessoais').click(function(){
+          $('.pessoais2').show();
+          $('.emailsenha2').hide();
+          $('.profissionais2').hide();
+          $('.escolaridade2').hide();
+        });
+        $('#emailsenha').click(function(){
+          $('.emailsenha2').show();
+          $('.pessoais2').hide();
+          $('.profissionais2').hide();
+          $('.escolaridade2').hide();
+        });
+        $('#profissionais').click(function(){
+          $('.profissionais2').show();
+          $('.pessoais2').hide();
+          $('.emailsenha2').hide();
+          $('.escolaridade2').hide();
+        });
+        $('#escolaridade').click(function(){
+          $('.escolaridade2').show();
+          $('.pessoais2').hide();
+          $('.profissionais2').hide();
+          $('.emailsenha2').hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid" align="center">
+      <h1 class="font-weight-bold display-4 m-1.2 bg-info">Formulário</h1>
+      <a id="pessoais" class="font-weight-bold display-4 m-1.2"><img class="img-fluid" src="img/user.png" width="90px" height="90px">
+      Dado Pessoais</a><br>
+      <div class="pessoais2">
+        <label>*Nome:</label>
+        <input type="text" name="nome" value="" placeholder="Digite seu nome aqui." required><br><br>
+
+        <label>*Sexo:</label><br>
+        <input class="campo" type="radio" name="masc" value="masc" id="masc" required>
+        <label for="masc"></label>
+        <label>Masculino</label>
+        <input class="campo" type="radio" name="femi" value="femi" id="femi" required>
+        <label for="femi"></label>
+        <label>Feminino</label> <br>
+
+        <label>Data de Nascimento:</label><br>
+        <input type="date" name="Data" value=""><br><br>
+
+        <label>*CPF:</label>
+        <input type="text" name="cpf" value="" placeholder="Ex: 000.000.000-00" maxlength="14" required>
+
+        <label>*RG:</label>
+        <input type="text" name="rg" value="" placeholder="Ex: 00.000.000-0" maxlength="12" required><br><br>
+
+        <label>Endereço:</label>
+        <input type="text" name="rua" value="" placeholder="Rua">
+        <input type="text" name="bairro" value="" placeholder="Bairro">
+        <input type="text" name="cep" value="" placeholder="CEP"><br><br>
+
+        <label>Telefone ou Celular:</label>
+
+      </div>
+      <a id="escolaridade" class="font-weight-bold display-4 m-1.2"><img class="img-fluid" src="img/escola.png" width="90px" height="90px">
+      Escolaridade</a><br>
+      <div class="escolaridade2">
+        <label>*Escolha seu gral de escolaridade:</label><br>
+        <select name="escola" required>
+          <option class="campo"value="">Ensino medio completo</option>
+          <option class="campo"value="0">Ensino medio incompleto</option>
+          <option class="campo"value="10">Ensino Fundamental completo</option>
+          <option class="campo"value="20">Ensino Fundamental iconpleto</option>
+          <option class="campo"value="100">Ensino Superior</option>
+        </select><br><br>
+        <label>Ano que terminou ou parou os estudos</label><br>
+        <input type="date" name="date2" value="">
+
+      </div>
+      <a id="profissionais" class="font-weight-bold display-4 m-1.2"><img class="img-fluid" src="img/search.png" width="90px" height="90px">
+      Dados Profissionais</a><br>
+      <div class="profissionais2">
+        <label>*Data de Entrada</label><br>
+        <input type="date" name="dataentrada" value="" required><br><br>
+
+        <label>*Data de Saída</label><br>
+        <input type="date" name="datasaida" value="" required><br><br>
+
+        <label>*Cargo:</label><br>
+        <input type="text" name="cargo" value="" placeholder="Ex: Atendente" required><br><br>
+
+        <label>Empresa</label><br>
+        <input type="text" name="empresa" value="" placeholder="Ex: GTFoods">
+
+      </div>
+      <a  id="emailsenha" class="font-weight-bold display-4 m-1.2"><img class="img-fluid" src="img/password.png" width="90px" height="90px">
+        E-mail e Senha</a><br>
+      <div class="emailsenha2">
+          <label>*E-mail</label><br>
+          <input type="email" name="email" value="" placeholder="Digite seu e-mail aqui." required><br><br>
+
+          <label>*Senha</label><br>
+          <input type="password" name="senha" value="" placeholder="Digite sua senha aqui." required><br><br>,
+
+          <input type="submit" name="enviar" value="Enviar">
+      </div>
+
+      <h5 class="footer">* Os campos que possuem * são obrigatorios.</h5>
+    </div>
+  </body>
+</html>

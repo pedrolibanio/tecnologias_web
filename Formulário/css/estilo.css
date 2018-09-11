@@ -1,0 +1,14 @@
+
+.escolaridade2, .profissionais2, .emailsenha2, .pessoais2{
+  display: none;
+}
+*{
+  margin:3;
+  padding:0;
+}
+h1{
+  padding: 35px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: 10px;
+}
